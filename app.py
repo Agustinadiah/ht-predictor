@@ -1,5 +1,11 @@
+import streamlit as st
+import pandas as pd
+import numpy as np
+from sklearn.preprocessing import StandardScaler
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import BaggingClassifier
+from sklearn.utils import resample
  
-    # ===============================
 # 1. Load & Train Model
 # ===============================
 @st.cache(allow_output_mutation=True)

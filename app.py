@@ -2,7 +2,7 @@
     # ===============================
 # 1. Load & Train Model
 # ===============================
-@st.cache_resource
+@st.cache(allow_output_mutation=True)
 def load_model():
     df = pd.read_csv("data1.csv", sep=";")
     df = df.drop(columns=["NO", "STASUS BMI"])

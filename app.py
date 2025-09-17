@@ -8,7 +8,7 @@ from sklearn.utils import resample
  
 # 1. Load & Train Model
 # ===============================
-@st.cache(allow_output_mutation=True)
+@st.cache_resource
 def load_model():
     df = pd.read_csv("data1.csv", sep=";")
     df = df.drop(columns=["NO", "STASUS BMI"])
